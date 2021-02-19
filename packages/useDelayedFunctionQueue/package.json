@@ -1,0 +1,23 @@
+{
+  "name": "@cookes-hooks/useDelayedFunctionQueue",
+  "version": "1.0.0",
+  "description": "Queue up functions for delayed execution",
+  "main": "build/useDelayedFunctionQueue.js",
+  "entry": "build/useDelayedFunctionQueue.js",
+  "repository": "",
+  "author": "Daniel Cooke <danielcooke1996@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  }
+ 
+}
