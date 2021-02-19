@@ -3,6 +3,7 @@ import useDelayedFunctionQueue  from '@cookes-hooks/useDelayedFunctionQueue'
 
 const Main = () => {
     const { add, queue } = useDelayedFunctionQueue()
+
     return <div></div>
 }
 
