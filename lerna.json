@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "commands": {
+    "publish": {
+      "allowBranch": "master"
+    }
+  },
+  "version": "0.0.0"
+}
