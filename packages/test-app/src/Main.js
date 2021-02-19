@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useDelayedFunctionQueue  from '@cookes-hooks/useDelayedFunctionQueue'
 
 const Main = () => {
     const { add, queue } = useDelayedFunctionQueue()
-    add();
-    queue();
     return <div></div>
 }
 
