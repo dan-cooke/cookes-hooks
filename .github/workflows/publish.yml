@@ -21,5 +21,5 @@ jobs:
     - name: Test
       run: yarn && yarn test
     - name: Release
-      run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && lerna publish
+      run: yarn && npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && yarn lerna publish
     
