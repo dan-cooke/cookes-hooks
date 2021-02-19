@@ -1,6 +1,7 @@
 {
   "name": "@cookes-hooks/test-app",
   "version": "1.0.0",
+  "private": true,
   "description": "Test app to test integration of Hooks with a React App",
   "main": "index.js",
   "scripts": {
@@ -10,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "@testing-library/react": "^11.2.5",
-    "@cookes-hooks/useDelayedFunctionQueue": "*"
+    "@cookes-hooks/use-delayed-function-queue": "*"
   }
 }

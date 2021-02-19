@@ -8,18 +8,27 @@ on:
   push:
     branches: [ master ]
 
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   release:
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: "0"
+        token: ${{ secrets.GH_TOKEN }}
+
+
+    - run: git config --global user.email "danielcooke1996@gmail.com"
+    - run: git config --global user.name "dan-cooke"
+    - run: git config --global hub.protocol https
+    # - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
     - name: Build
       run: yarn && yarn build
     - name: Test
       run: yarn && yarn test
     - name: Release
-      run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && lerna publish
+      run: yarn && npm config set '//registry.npmjs.org/:_authToken' ${{ secrets.NPM_TOKEN }} && yarn lerna publish --conventional-commits --yes
     
