@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Publish
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: yarn && yarn build
+    - name: Test
+      run: yarn && yarn test
+    - name: Release
+      run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && lerna publish
+    
