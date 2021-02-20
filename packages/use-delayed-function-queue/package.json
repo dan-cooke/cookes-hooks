@@ -1,6 +1,6 @@
 {
   "name": "@cookes-hooks/use-delayed-function-queue",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Queue up functions for delayed execution",
   "main": "build/useDelayedFunctionQueue.js",
   "entry": "build/useDelayedFunctionQueue.js",
