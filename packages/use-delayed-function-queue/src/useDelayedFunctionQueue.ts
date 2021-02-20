@@ -1,5 +1,12 @@
 import { useCallback, useEffect, useState } from "react"
 
+/**
+ * This hook will allow you to queue up several functions for delayed execution. 
+ * You can specify a delay in ms for every function to wait before calling the next 
+ * in the queue.
+ * 
+ * @docs https://github.com/dan-cooke/cookes-hooks/tree/master/packages/use-delayed-function-queue
+ */
 const useDelayedFunctionQueue = () => {
     const [queue, setQueue] = useState([])
     const [running, setRunning] = useState(false)
