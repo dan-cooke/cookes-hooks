@@ -1,6 +1,6 @@
 {
   "name": "@cookes-hooks/use-delayed-function-queue",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "description": "Queue up functions for delayed execution",
   "main": "build/useDelayedFunctionQueue.js",
   "entry": "build/useDelayedFunctionQueue.js",
@@ -22,5 +22,4 @@
   "peerDependencies": {
     "react": "^16.8.0"
   }
- 
 }
